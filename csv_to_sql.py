@@ -3,8 +3,11 @@
 # csv_to_json.py
 # slurp in the csv file and output the results as JSON
 #
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
-from StringIO import StringIO
 import csv, json, optparse
 import sys
 
